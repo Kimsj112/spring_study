@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--    fragment를 불러와 사용할 때 replace속성을 이용할 수 있다.
+        replace는 현재 요소를 조각으로 대체한다.
+        th:replace="~{조각을 가진 파일경로 :: 조각의 이름}"
+-->
+    <header th:replace="~{fragment/header :: header2}"></header>
+
+<!--    include는 현재 태그 내부에 조각의 content를 삽입해준다.-->
+    <header th:include="~{fragment/header :: header1}"></header>
+    <main>
+        <h1>Main Page!!!</h1>
+    </main>
+</body>
+</html>
